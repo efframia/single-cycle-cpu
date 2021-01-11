@@ -1,0 +1,17 @@
+addi $t0,$zero,100
+addiu $t1,$t0,100
+add $t2,$t1,$t0
+sub $t3,$t2,$t1
+and $t4,$t3,$t2
+or $t5,$t4,$t3
+slt $t6,$t5,$t4
+srl $t7,$t6,1
+sll $t7,$t6,1
+lui $t7,100
+sw $t7,4($0)
+lw $t7,4($0)
+beq $t6,$t7,one
+nop
+one:j two
+nop
+two:
